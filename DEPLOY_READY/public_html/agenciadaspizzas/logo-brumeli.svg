@@ -1,94 +1,71 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="hexClip">
-      <polygon points="256,28 468,151 468,361 256,484 44,361 44,151"/>
-    </clipPath>
-    <linearGradient id="chefSkin" x1="188" y1="120" x2="324" y2="284" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ead2b1"/>
-      <stop offset="1" stop-color="#d7b58d"/>
+    <linearGradient id="bg" x1="40" y1="32" x2="472" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f5f2ee"/>
     </linearGradient>
-    <linearGradient id="pizzaGrad" x1="130" y1="184" x2="205" y2="260" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f7a85c"/>
-      <stop offset="1" stop-color="#e97d2b"/>
+    <linearGradient id="lid" x1="162" y1="64" x2="350" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7f7f7"/>
+      <stop offset="1" stop-color="#dedede"/>
+    </linearGradient>
+    <linearGradient id="food" x1="176" y1="112" x2="344" y2="258" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9b4f2e"/>
+      <stop offset="1" stop-color="#d38a4a"/>
+    </linearGradient>
+    <linearGradient id="labelStrip" x1="120" y1="288" x2="392" y2="348" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f6f0e8"/>
+      <stop offset="1" stop-color="#efe8df"/>
     </linearGradient>
   </defs>
 
-  <rect width="512" height="512" fill="#ffffff"/>
-  <g clip-path="url(#hexClip)">
-    <rect width="512" height="512" fill="#ffffff"/>
-    <path d="M256 34L462 153V359L256 478L50 359V153L256 34Z" fill="#fffefc"/>
-    <path d="M256 34L462 153V359L256 478L50 359V153L256 34Z" stroke="#f4bf10" stroke-width="12"/>
+  <rect width="512" height="512" fill="url(#bg)"/>
 
-    <g opacity="0.95">
-      <rect x="56" y="350" width="400" height="140" fill="#f7c116"/>
-      <g opacity="0.95" stroke="#ffffff" stroke-width="8">
-        <path d="M72 352V470"/>
-        <path d="M90 352V470"/>
-        <path d="M108 352V470"/>
-        <path d="M126 352V470"/>
-        <path d="M144 352V470"/>
-        <path d="M162 352V470"/>
-        <path d="M180 352V470"/>
-        <path d="M198 352V470"/>
-        <path d="M216 352V470"/>
-        <path d="M234 352V470"/>
-        <path d="M252 352V470"/>
-        <path d="M270 352V470"/>
-        <path d="M288 352V470"/>
-        <path d="M306 352V470"/>
-        <path d="M324 352V470"/>
-        <path d="M342 352V470"/>
-        <path d="M360 352V470"/>
-        <path d="M378 352V470"/>
-        <path d="M396 352V470"/>
-        <path d="M414 352V470"/>
-        <path d="M432 352V470"/>
-      </g>
-      <path d="M56 350H456" stroke="#f0b800" stroke-width="12"/>
-      <path d="M64 482L256 406L448 482" stroke="#f0b800" stroke-width="10"/>
-    </g>
+  <ellipse cx="256" cy="128" rx="138" ry="108" fill="#ffffff" opacity="0.65"/>
+  <path d="M138 132L256 40L374 132" stroke="#ffd11b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M138 132V296" stroke="#ffd11b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M374 132V296" stroke="#ffd11b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M138 296L256 388L374 296" stroke="#ffd11b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164 348H348" stroke="#ffd11b" stroke-width="10" stroke-linecap="round"/>
+  <g opacity="0.95">
+    <path d="M163 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M182 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M201 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M220 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M239 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M258 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M277 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M296 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M315 337V388" stroke="#ffd11b" stroke-width="8"/>
+    <path d="M334 337V388" stroke="#ffd11b" stroke-width="8"/>
+  </g>
 
-    <rect x="40" y="247" width="432" height="120" fill="#222222"/>
-    <path d="M72 307H440" stroke="#2e2e2e" stroke-width="2" opacity="0.7"/>
+  <rect x="86" y="206" width="340" height="128" rx="18" fill="#ffffff" opacity="0.98" stroke="#dddddd" stroke-width="2"/>
+  <ellipse cx="256" cy="205" rx="118" ry="68" fill="url(#food)" stroke="#3c2418" stroke-width="6"/>
+  <ellipse cx="256" cy="198" rx="96" ry="52" fill="#e28a42" opacity="0.55"/>
+  <g opacity="0.95">
+    <circle cx="210" cy="183" r="7" fill="#7a1e1a"/>
+    <circle cx="230" cy="167" r="6" fill="#d63b2f"/>
+    <circle cx="248" cy="189" r="7" fill="#7a1e1a"/>
+    <circle cx="270" cy="173" r="6" fill="#d63b2f"/>
+    <circle cx="290" cy="188" r="7" fill="#7a1e1a"/>
+    <circle cx="312" cy="168" r="6" fill="#d63b2f"/>
+    <circle cx="198" cy="203" r="5" fill="#f3d67a"/>
+    <circle cx="220" cy="196" r="5" fill="#f3d67a"/>
+    <circle cx="238" cy="210" r="5" fill="#f3d67a"/>
+    <circle cx="260" cy="195" r="5" fill="#f3d67a"/>
+    <circle cx="282" cy="210" r="5" fill="#f3d67a"/>
+    <circle cx="304" cy="196" r="5" fill="#f3d67a"/>
+    <circle cx="326" cy="204" r="5" fill="#f3d67a"/>
+  </g>
 
-    <g transform="translate(0, -6)">
-      <ellipse cx="252" cy="168" rx="58" ry="70" fill="url(#chefSkin)" stroke="#231f20" stroke-width="6"/>
-      <path d="M210 168C208 127 225 100 251 88C279 75 312 88 322 114C331 136 327 158 316 178C307 195 289 208 268 209C243 210 221 194 210 168Z" fill="#f1e9de" stroke="#231f20" stroke-width="6"/>
-      <path d="M216 119C226 96 243 85 255 85C270 85 286 92 298 107C303 114 304 123 300 129C297 135 289 137 282 134C273 131 264 127 255 127C246 127 236 130 227 135C220 139 213 136 209 130C206 126 206 122 216 119Z" fill="#ffffff" opacity="0.95"/>
-      <path d="M224 84C227 67 241 52 257 52C274 52 289 64 296 80C302 74 311 72 319 75C331 79 339 90 341 103C342 112 338 118 331 120C325 122 320 119 317 114C314 108 308 102 301 100C293 97 286 99 280 104C271 82 252 74 236 78C231 79 227 81 224 84Z" fill="#ffffff" stroke="#231f20" stroke-width="6" stroke-linejoin="round"/>
-      <path d="M216 147C225 145 229 141 234 136" stroke="#231f20" stroke-width="6" stroke-linecap="round"/>
-      <path d="M286 148C292 146 296 142 302 138" stroke="#231f20" stroke-width="6" stroke-linecap="round"/>
-      <path d="M236 162C247 160 259 160 271 162" stroke="#231f20" stroke-width="5" stroke-linecap="round"/>
-      <path d="M236 177C243 186 252 191 262 191C272 191 281 186 287 177" stroke="#231f20" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="232" cy="155" r="5" fill="#231f20"/>
-      <circle cx="279" cy="155" r="5" fill="#231f20"/>
+  <rect x="104" y="248" width="304" height="62" fill="#1f1f1f"/>
+  <path d="M118 279H394" stroke="#f3f3f3" stroke-width="3" opacity="0.85"/>
+  <text x="256" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#ffffff" letter-spacing="1">BRUMELI</text>
+  <text x="256" y="346" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="500" fill="#222222">Gourmet</text>
 
-      <path d="M197 172C174 174 158 191 149 212C145 222 142 233 139 244" stroke="#231f20" stroke-width="18" stroke-linecap="round"/>
-      <path d="M195 172C174 174 160 188 150 207C145 216 142 226 138 237" stroke="#ead2b1" stroke-width="12" stroke-linecap="round"/>
-
-      <path d="M317 173C347 195 361 214 370 235" stroke="#231f20" stroke-width="18" stroke-linecap="round"/>
-      <path d="M317 173C346 194 358 210 366 228" stroke="#ead2b1" stroke-width="12" stroke-linecap="round"/>
-
-      <path d="M146 244C165 232 192 224 212 228C221 230 223 238 217 245C205 258 181 264 159 262C148 260 138 256 138 249C138 247 141 246 146 244Z" fill="#ead2b1" stroke="#231f20" stroke-width="6"/>
-      <path d="M372 238C370 223 379 210 394 203C405 198 416 199 425 204C431 208 432 217 427 222C421 229 411 236 399 240C389 243 378 244 372 238Z" fill="#ead2b1" stroke="#231f20" stroke-width="6"/>
-
-      <path d="M256 213C245 213 237 225 230 236C224 245 219 258 214 271L298 271C294 256 289 245 281 234C274 224 267 213 256 213Z" fill="#f1e9de" stroke="#231f20" stroke-width="6"/>
-    </g>
-
-    <g transform="translate(0, 10)">
-      <path d="M103 260C103 235 126 212 152 212C156 212 159 212 163 213L160 235L175 249L160 264L164 283C160 285 156 286 152 286C126 286 103 285 103 260Z" fill="url(#pizzaGrad)" stroke="#231f20" stroke-width="6"/>
-      <circle cx="125" cy="239" r="5" fill="#8b1e1a"/>
-      <circle cx="141" cy="231" r="5" fill="#b92a25"/>
-      <circle cx="151" cy="246" r="5" fill="#8b1e1a"/>
-      <circle cx="131" cy="255" r="5" fill="#d9c15b"/>
-      <circle cx="153" cy="260" r="5" fill="#8b1e1a"/>
-      <circle cx="118" cy="249" r="4" fill="#d9c15b"/>
-      <circle cx="146" cy="270" r="4" fill="#8b1e1a"/>
-      <path d="M150 282C158 284 165 283 171 281" stroke="#231f20" stroke-width="4" stroke-linecap="round"/>
-    </g>
-
-    <rect x="70" y="258" width="372" height="104" fill="none"/>
-    <text x="256" y="302" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#f5f5f5">Brumeli</text>
-    <text x="256" y="408" text-anchor="middle" font-family="Brush Script MT, Segoe Script, cursive" font-size="74" font-weight="700" fill="#111111">Gourmet</text>
+  <g>
+    <path d="M172 364H340C360 364 376 380 376 400V410C376 430 360 446 340 446H172C152 446 136 430 136 410V400C136 380 152 364 172 364Z" fill="url(#labelStrip)" stroke="#e2ddd6" stroke-width="2"/>
+    <text x="256" y="396" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#7b7b7b" letter-spacing="2">ESPECIALIDADE CASEIRA</text>
+    <text x="256" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#999999" letter-spacing="1">BRUMELI GOURMET • ATENDIMENTO ARTESANAL</text>
   </g>
 </svg>
