@@ -23,14 +23,14 @@ try {
         const messaging = self.firebase.messaging();
 
         messaging.onBackgroundMessage((payload) => {
-            const title = payload?.notification?.title || 'Agência das Pizzas';
+            const title = payload?.notification?.title || 'Brumeli Gourmet';
             const body = payload?.notification?.body || payload?.data?.body || 'Você tem uma nova notificação.';
-            const icon = payload?.notification?.icon || 'logo%20pizza.jpg';
+            const icon = payload?.notification?.icon || 'logo-brumeli.svg';
 
             self.registration.showNotification(title, {
                 body,
                 icon,
-                badge: 'logo%20pizza.jpg'
+                badge: 'logo-brumeli.svg'
             });
         });
     }
@@ -52,7 +52,7 @@ const ASSETS_TO_CACHE = [
     './admin.js',
     './comanda.js',
     './manifest.json',
-    './logo%20pizza.jpg'
+    './logo-brumeli.svg'
 ];
 
 self.addEventListener('install', (event) => {

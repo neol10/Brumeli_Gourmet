@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="56" x2="440" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20110c"/>
+      <stop offset="1" stop-color="#090705"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="132" y1="128" x2="380" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4c46b"/>
+      <stop offset="1" stop-color="#a63a2a"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bg)"/>
+  <circle cx="256" cy="182" r="98" fill="url(#accent)" opacity="0.95"/>
+  <circle cx="228" cy="160" r="10" fill="#fff8f0" opacity="0.95"/>
+  <circle cx="282" cy="150" r="8" fill="#fff8f0" opacity="0.92"/>
+  <circle cx="292" cy="194" r="9" fill="#fff8f0" opacity="0.92"/>
+  <circle cx="214" cy="200" r="8" fill="#fff8f0" opacity="0.92"/>
+  <path d="M160 286C160 255.019 185.019 230 216 230H296C326.981 230 352 255.019 352 286V328C352 354.51 330.51 376 304 376H208C181.49 376 160 354.51 160 328V286Z" fill="#f6ebe0"/>
+  <path d="M176 266C195 246 223 236 256 236C289 236 317 246 336 266" stroke="#a63a2a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M176 312H336" stroke="#c44a35" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+  <text x="256" y="286" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" letter-spacing="4" fill="#20110c">BRUMELI</text>
+  <text x="256" y="332" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="6" fill="#a63a2a">GOURMET</text>
+</svg>

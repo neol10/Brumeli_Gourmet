@@ -1375,15 +1375,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 navigator.serviceWorker.ready.then(reg => {
                     reg.showNotification('Brumeli Gourmet', {
                         body: msg,
-                        icon: 'logo pizza.jpg',
-                        badge: 'logo pizza.jpg',
+                        icon: 'logo-brumeli.svg',
+                        badge: 'logo-brumeli.svg',
                         vibrate: [200, 100, 200]
                     });
                 }).catch(() => {
-                    new Notification('Brumeli Gourmet', { body: msg, icon: 'logo pizza.jpg' });
+                    new Notification('Brumeli Gourmet', { body: msg, icon: 'logo-brumeli.svg' });
                 });
             } catch (e) {
-                new Notification('Brumeli Gourmet', { body: msg, icon: 'logo pizza.jpg' });
+                new Notification('Brumeli Gourmet', { body: msg, icon: 'logo-brumeli.svg' });
             }
         }
     }

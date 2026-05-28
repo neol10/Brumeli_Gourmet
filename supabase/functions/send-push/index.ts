@@ -49,7 +49,7 @@ function utf8Bytes(value: string): Uint8Array {
 function toArrayBuffer(bytes: Uint8Array): ArrayBuffer {
   // Evita o erro de tipagem do TS com ArrayBufferLike/SharedArrayBuffer.
   // Criar uma cópia garante um ArrayBuffer “puro”.
-  return new Uint8Array(bytes).buffer;
+              icon: params.icon || "logo-brumeli.svg",
 }
 
 function pemToPkcs8Bytes(pem: string): Uint8Array {
@@ -162,7 +162,7 @@ async function fcmSend(params: {
         notification: {
           title: params.title,
           body: params.body,
-          icon: params.icon || "logo%20pizza.jpg",
+          icon: params.icon || "logo-brumeli.svg",
         },
         fcm_options: params.url ? { link: params.url } : undefined,
       },
