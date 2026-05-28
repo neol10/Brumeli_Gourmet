@@ -10,7 +10,7 @@ async function createUser() {
             },
             body: JSON.stringify({
                 email: 'adminagenciadaspizzas@gmail.com',
-                password: 'Admin166480'
+                password: 'Admin166480*-'
             })
         });
         const res = await req.json();
@@ -25,7 +25,7 @@ async function createUser() {
             },
             body: JSON.stringify({
                 email: 'adminagenciadaspizzas@gmail.com',
-                password: 'Admin166480'
+                password: 'Admin166480*-'
             })
         });
         const res2 = await req2.json();
