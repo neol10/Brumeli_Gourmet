@@ -1,23 +1,24 @@
 /* Google Fonts: Space Grotesk */
 :root {
     /* Color System - Corpo e Fundo Dark mode premium */
-    --bg-dark: #0a0e17;
-    /* Fundo principal escuro com leve toque azulado */
-    --bg-card: rgba(22, 28, 48, 0.4);
+    --bg-dark: #090705;
+    /* Fundo principal escuro com toque gourmet */
+    --bg-card: rgba(30, 22, 18, 0.72);
     /* Fundo dos cards glassmorphism */
-    --bg-card-hover: rgba(30, 38, 65, 0.6);
-    --border-color: rgba(255, 255, 255, 0.08);
+    --bg-card-hover: rgba(44, 32, 26, 0.84);
+    --border-color: rgba(244, 208, 146, 0.14);
 
-    /* Branding Accent Color: Vermelho vibrante #e31639 */
-    --primary-red: #e31639;
-    --primary-red-hover: #c21230;
-    --primary-red-glow: rgba(227, 22, 57, 0.3);
+    /* Branding Accent Color: terracota sofisticada */
+    --primary-red: #a63a2a;
+    --primary-red-hover: #c44a35;
+    --primary-red-glow: rgba(198, 74, 53, 0.3);
+    --primary-gold: #f4c46b;
 
     /* Text Colors */
-    --text-light: #f8fafc;
-    /* Quase branco puro */
-    --text-muted: #94a3b8;
-    /* Cinza claro para subtítulos */
+    --text-light: #fff8f0;
+    /* Quase branco quente */
+    --text-muted: #c9b8aa;
+    /* Bege acinzentado para subtítulos */
 
     /* Typography */
     --font-main: 'Space Grotesk', sans-serif;
@@ -45,7 +46,10 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background:
+        radial-gradient(circle at top right, rgba(244, 196, 107, 0.12), transparent 28%),
+        radial-gradient(circle at 15% 20%, rgba(166, 58, 42, 0.18), transparent 32%),
+        linear-gradient(180deg, #090705 0%, #0f0a08 100%);
     color: var(--text-light);
     overflow-x: hidden;
     position: relative;
@@ -78,8 +82,8 @@ body {
     left: -10%;
     width: 400px;
     height: 400px;
-    background: rgba(43, 88, 204, 0.15);
-    /* Contraste frio bem distante */
+    background: rgba(244, 196, 107, 0.12);
+    /* Brilho dourado suave */
 }
 
 
@@ -91,7 +95,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(10, 14, 23, 0.7);
+    background: rgba(9, 7, 5, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
@@ -328,6 +332,22 @@ body {
     z-index: 10;
 }
 
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    color: var(--primary-gold);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 .hero-title {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
@@ -337,7 +357,7 @@ body {
 }
 
 .text-highlight {
-    color: var(--primary-red);
+    color: var(--primary-gold);
     position: relative;
     display: inline-block;
 }
@@ -350,8 +370,8 @@ body {
     left: 0;
     width: 100%;
     height: 8px;
-    background: var(--primary-red);
-    opacity: 0.3;
+    background: linear-gradient(90deg, var(--primary-red), var(--primary-gold));
+    opacity: 0.32;
     z-index: -1;
     transform: rotate(-1deg);
 }
@@ -370,6 +390,35 @@ body {
     display: flex;
     gap: 16px;
     justify-content: center;
+}
+
+.brand-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 2rem auto 0;
+    max-width: 820px;
+}
+
+.brand-highlight {
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    text-align: left;
+    backdrop-filter: blur(14px);
+}
+
+.brand-highlight strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+    color: var(--text-light);
+}
+
+.brand-highlight span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 
@@ -434,7 +483,7 @@ body {
     top: 80px;
     /* abaixo da navbar */
     z-index: 900;
-    background: rgba(10, 14, 23, 0.85);
+    background: rgba(9, 7, 5, 0.86);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
@@ -669,7 +718,7 @@ body {
    Footer
    ========================================================================== */
 .site-footer {
-    background: #06090e;
+    background: linear-gradient(180deg, #0b0806 0%, #060504 100%);
     border-top: 1px solid var(--border-color);
     padding: 6rem 2rem 2rem;
     margin-top: 4rem;
@@ -1002,6 +1051,10 @@ body {
         align-items: center;
     }
 
+    .brand-highlights {
+        grid-template-columns: 1fr;
+    }
+
     /* Categories Nav */
     .category-nav {
         justify-content: flex-start;
@@ -1119,34 +1172,34 @@ body {
    Tema Claro (Light Mode)
    ========================================================================== */
 body.light-mode {
-    --bg-dark: #f8fafc;
-    --bg-card: rgba(255, 255, 255, 0.7);
-    --bg-card-hover: rgba(255, 255, 255, 0.95);
-    --border-color: rgba(0, 0, 0, 0.08);
-    --text-light: #0f172a;
-    --text-muted: #475569;
+    --bg-dark: #fff8f0;
+    --bg-card: rgba(255, 255, 255, 0.78);
+    --bg-card-hover: rgba(255, 255, 255, 0.96);
+    --border-color: rgba(104, 62, 43, 0.1);
+    --text-light: #251712;
+    --text-muted: #6c5648;
 }
 
 body.light-mode .navbar {
-    background: rgba(248, 250, 252, 0.85);
+    background: rgba(255, 248, 240, 0.9);
 }
 
 body.light-mode .category-nav {
-    background: rgba(248, 250, 252, 0.9);
+    background: rgba(255, 248, 240, 0.94);
 }
 
 body.light-mode .orb-1 {
-    background: rgba(227, 22, 57, 0.15);
-    /* Vermelho bem mais suave pro claro */
+    background: rgba(166, 58, 42, 0.16);
+    /* Terracota suave pro claro */
 }
 
 body.light-mode .orb-2 {
-    background: rgba(43, 88, 204, 0.08);
-    /* Azul suave pro claro */
+    background: rgba(244, 196, 107, 0.12);
+    /* Dourado suave pro claro */
 }
 
 body.light-mode .site-footer {
-    background: #f1f5f9;
+    background: linear-gradient(180deg, #fff8f0 0%, #f6ebe0 100%);
 }
 
 body.light-mode .glass-card {
@@ -1160,6 +1213,10 @@ body.light-mode .glass-card:hover {
 body.light-mode .price-tag {
     background: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .brand-highlight {
+    background: rgba(255, 255, 255, 0.82);
 }
 
 /* ==========================================================================
@@ -1381,12 +1438,12 @@ body.light-mode .cart-item-qty button {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, #1a0505, #3b0a0a);
-    color: #fca5a5;
+    background: linear-gradient(135deg, #180d08, #2f1810);
+    color: #ffe1c9;
     z-index: 9998;
     padding: 12px 24px;
-    border-bottom: 2px solid rgba(239, 68, 68, 0.4);
-    box-shadow: 0 4px 24px rgba(239, 68, 68, 0.2);
+    border-bottom: 2px solid rgba(244, 196, 107, 0.28);
+    box-shadow: 0 4px 24px rgba(244, 196, 107, 0.16);
 }
 
 .closed-banner-inner {

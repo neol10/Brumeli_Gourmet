@@ -1,7 +1,7 @@
 {
-    "name": "Agência das Pizzas - Admin",
+    "name": "Brumeli Gourmet - Admin",
     "short_name": "Admin",
-    "description": "Painel administrativo da Agência das Pizzas.",
+    "description": "Painel administrativo da Brumeli Gourmet.",
     "start_url": "./admin",
     "scope": "./admin",
     "display": "standalone",

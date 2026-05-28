@@ -466,6 +466,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ATUALIZAR STATUS NO BANCO
 window.changeOrderStatus = async function (orderId, newStatus) {
+    const { data: { session }, error: sessionError } = await dbClient.auth.getSession();
+    if (sessionError || !session) {
+        alert("Sessao expirada. Faca login novamente para atualizar pedidos.");
+        return;
+    }
+
     const orderIndex = kdsOrders.findIndex(o => o.id.toString() === orderId.toString());
     if (orderIndex > -1) {
         // Optimistic UI Update pra parecer mais rapido
@@ -477,9 +483,14 @@ window.changeOrderStatus = async function (orderId, newStatus) {
         renderLanes();
 
         // Em background, atualiza o bano
-        const { error } = await dbClient.from('orders').update({ status: newStatus }).eq('id', orderId);
-        if (error) {
-            console.error("Erro ao atualizar status", error);
+        const { data, error } = await dbClient
+            .from('orders')
+            .update({ status: newStatus })
+            .eq('id', orderId)
+            .select('id, status');
+        if (error || !data || data.length === 0) {
+            if (error) console.error("Erro ao atualizar status", error);
+            if (!data || data.length === 0) console.warn("Atualizacao sem retorno. Verifique permissoes/RLS.");
             // Reverte em caso de erro
             if (newStatus !== 'entregue') {
                 kdsOrders[orderIndex].status = oldStatus;
@@ -487,7 +498,7 @@ window.changeOrderStatus = async function (orderId, newStatus) {
                 fetchActiveOrders(); // Força fetch total
             }
             renderLanes();
-            alert("Erro ao atualizar o pedido no servidor.");
+            alert("Nao foi possivel atualizar o pedido. Verifique permissoes do usuario.");
         }
     }
 }

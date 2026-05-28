@@ -579,7 +579,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const btnShare = document.getElementById('btn-share-product');
         if (btnShare) {
             btnShare.onclick = () => {
-                const text = `🍕 Olha que delícia! Estou com vontade de pedir: *${prod.name}* lá na Agência das Pizzas.\n\nVeja no cardápio online: https://agenciadaspizzas.vercel.app/`;
+                const text = `🍕 Olha que delícia! Estou com vontade de pedir: *${prod.name}* na Brumeli Gourmet.\n\nVeja no cardápio online: https://agenciadaspizzas.vercel.app/`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
             };
         }
@@ -1203,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             // Formata o texto do pedido (WHATSAPP)
-            let textoPedido = `*🍕 NOVO PEDIDO - Agência das Pizzas*\n*Nº ${orderShortId}*\n`;
+            let textoPedido = `*🍕 NOVO PEDIDO - Brumeli Gourmet*\n*Nº ${orderShortId}*\n`;
             let tipoPedidoTxt = (deliveryType === 'entrega') ? "🛵 *ENTREGA*" : "🏪 *RETIRADA NO LOCAL*";
             textoPedido += `\n${tipoPedidoTxt}`;
             textoPedido += nomeCliente;
@@ -1388,17 +1388,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         if ("Notification" in window && Notification.permission === 'granted') {
             try {
                 navigator.serviceWorker.ready.then(reg => {
-                    reg.showNotification('Agência das Pizzas', {
+                    reg.showNotification('Brumeli Gourmet', {
                         body: msg,
                         icon: 'logo pizza.jpg',
                         badge: 'logo pizza.jpg',
                         vibrate: [200, 100, 200]
                     });
                 }).catch(() => {
-                    new Notification('Agência das Pizzas', { body: msg, icon: 'logo pizza.jpg' });
+                    new Notification('Brumeli Gourmet', { body: msg, icon: 'logo pizza.jpg' });
                 });
             } catch (e) {
-                new Notification('Agência das Pizzas', { body: msg, icon: 'logo pizza.jpg' });
+                new Notification('Brumeli Gourmet', { body: msg, icon: 'logo pizza.jpg' });
             }
         }
     }

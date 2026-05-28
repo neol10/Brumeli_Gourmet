@@ -1,11 +1,11 @@
 {
-    "name": "Agência das Pizzas",
-    "short_name": "AgênciaPizzas",
-    "description": "Peça suas pizzas e calzones com a melhor qualidade e rapidez da região.",
+    "name": "Brumeli Gourmet",
+    "short_name": "Brumeli",
+    "description": "Cardápio digital gourmet com pizzas, calzones e bebidas artesanais.",
     "start_url": "./",
     "display": "standalone",
-    "background_color": "#0f121b",
-    "theme_color": "#ef4444",
+    "background_color": "#090705",
+    "theme_color": "#a63a2a",
     "orientation": "portrait-primary",
     "icons": [
         {

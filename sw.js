@@ -22,7 +22,7 @@ try {
         const messaging = self.firebase.messaging();
 
         messaging.onBackgroundMessage((payload) => {
-            const title = payload?.notification?.title || 'Agência das Pizzas';
+            const title = payload?.notification?.title || 'Brumeli Gourmet';
             const body = payload?.notification?.body || payload?.data?.body || 'Você tem uma nova notificação.';
             const icon = payload?.notification?.icon || 'logo%20pizza.jpg';
 
