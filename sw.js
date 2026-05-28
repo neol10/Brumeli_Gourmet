@@ -24,12 +24,12 @@ try {
         messaging.onBackgroundMessage((payload) => {
             const title = payload?.notification?.title || 'Brumeli Gourmet';
             const body = payload?.notification?.body || payload?.data?.body || 'Você tem uma nova notificação.';
-            const icon = payload?.notification?.icon || 'logo-brumeli.svg';
+            const icon = payload?.notification?.icon || 'logo-brumeli.jpg';
 
             self.registration.showNotification(title, {
                 body,
                 icon,
-                badge: 'logo-brumeli.svg'
+                badge: 'logo-brumeli.jpg'
             });
         });
     }
@@ -52,7 +52,7 @@ const ASSETS_TO_CACHE = [
     './admin.js',
     './comanda.js',
     './manifest.json',
-    './logo-brumeli.svg',
+    './logo-brumeli.jpg',
     './404.html'
 ];
 

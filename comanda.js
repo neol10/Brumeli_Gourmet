@@ -183,7 +183,7 @@ function playNotification(isTest = false) {
     if ("Notification" in window && Notification.permission === "granted" && !isTest) {
         new Notification("🍕 Novo Pedido Chegou!", {
             body: "Verifique o painel da cozinha agora.",
-            icon: "logo-brumeli.svg"
+            icon: "logo-brumeli.jpg"
         });
     }
 
